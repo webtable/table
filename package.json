@@ -30,6 +30,7 @@
     "build": "rimraf dist tsconfig.tsbuildinfo && tsc",
     "lint": "eslint --color .",
     "preversion": "npm run lint",
+    "version": "npm run build",
     "postversion": "git push && git push --tags && npm publish"
   },
   "dependencies": {
