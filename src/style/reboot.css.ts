@@ -17,8 +17,6 @@ export default css`
 	}
 
 	caption {
-		padding-top: .5rem;
-		padding-bottom: .5rem;
 		color: var(--t-caption-color);
 		text-align: left;
 	}
