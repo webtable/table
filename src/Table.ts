@@ -7,7 +7,7 @@ import style from './style/Table.css';
 import themes from './style/themes.css';
 import variants from './style/variants.css';
 
-@customElement('t-able')
+@customElement('t-table')
 export default class Table extends LitElement {
 	static readonly styles = [reboot, variables, style, ...themes, ...variants];
 
@@ -41,6 +41,6 @@ export default class Table extends LitElement {
 
 declare global {
 	interface HTMLElementTagNameMap {
-		't-able': Table;
+		't-table': Table;
 	}
 }

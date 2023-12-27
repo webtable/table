@@ -1,16 +1,16 @@
 {
-  "name": "t-able",
+  "name": "@serg.io/t-table",
   "version": "0.1.0",
   "description": "Table custom element",
   "license": "MIT",
-  "homepage": "https://github.com/serg-io/t-able",
+  "homepage": "https://github.com/serg-io/t-table",
   "author": "Sergio Alcantara (https://github.com/serg-io)",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/serg-io/t-able.git"
+    "url": "git+https://github.com/serg-io/t-table.git"
   },
   "bugs": {
-    "url": "https://github.com/serg-io/t-able/issues"
+    "url": "https://github.com/serg-io/t-table/issues"
   },
   "type": "module",
   "main": "./dist/index.js",

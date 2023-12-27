@@ -16,7 +16,7 @@ export const light = css`
 `;
 
 /**
- * Dark theme. This theme can be enabled by adding the attribute theme="dark" to the <t-able> element.
+ * Dark theme. This theme can be enabled by adding the attribute theme="dark" to the <t-table> element.
  */
 export const dark = css`
 	:host {

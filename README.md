@@ -1,3 +1,3 @@
-# t-able
+# t-table
 
 Documentation coming soon.

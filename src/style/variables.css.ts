@@ -2,7 +2,7 @@ import { css } from 'lit';
 
 export default css`
 	:host {
-		--t-able-width: 100%;
+		--t-table-width: 100%;
 		--t-border-style: solid;
 		--t-border-width: 0;
 		--t-cell-border-bottom-width: 1px;

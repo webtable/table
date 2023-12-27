@@ -2,7 +2,7 @@ import { css } from 'lit';
 
 export default css`
 	table {
-		width: var(--t-able-width);
+		width: var(--t-table-width);
 		margin-bottom: var(--t-spacer);
 		border: var(--t-border-width) var(--t-border-style) var(--t-border-color);
 		
