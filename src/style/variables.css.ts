@@ -2,14 +2,15 @@ import { css } from 'lit';
 
 export default css`
 	:host {
-		--t-table-width: 100%;
+		--t-border-collapse: separate;
+		--t-border-spacing: 0;
 		--t-border-style: solid;
 		--t-border-width: 0;
 		--t-cell-border-bottom-width: 1px;
 		--t-cell-padding-x: .5rem;
 		--t-cell-padding-y: .5rem;
 		--t-divider: calc(var(--t-border-width) * 2) solid currentcolor;
-		--t-spacer: 1rem;
+		--t-table-width: 100%;
 		--t-vertical-align: top;
 
 		--t-color-column: var(--t-color);
