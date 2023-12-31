@@ -1,14 +1,14 @@
 import { customElement, property } from 'lit/decorators.js';
 import TableRow from './TableRow';
 
-@customElement('t-header-row')
-export default class TableHeaderRow extends TableRow {
+@customElement('t-footer-row')
+export default class TableFooterRow extends TableRow {
 	@property({ reflect: true })
-	slot = 'header';
+	slot = 'footer';
 }
 
 declare global {
 	interface HTMLElementTagNameMap {
-		't-header-row': TableHeaderRow;
+		't-footer-row': TableFooterRow;
 	}
 }

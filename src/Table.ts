@@ -14,10 +14,10 @@ export default class Table extends LitElement {
 	render() {
 		return html`
 			<table>
-				<caption><slot name="caption"></slot></caption>
-				<thead></thead>
-				<tbody></tbody>
-				<tfoot></tfoot>
+				<caption part="caption"><slot name="caption"></slot></caption>
+				<thead part="header"></thead>
+				<tbody part="body"></tbody>
+				<tfoot part="footer"></tfoot>
 			</table>
 		`;
 	}
@@ -30,8 +30,8 @@ export default class Table extends LitElement {
 		const bodySlot = document.createElement('slot');
 		const footSlot = document.createElement('slot');
 
-		headSlot.name = 'head';
-		footSlot.name = 'foot';
+		headSlot.name = 'header';
+		footSlot.name = 'footer';
 
 		thead?.appendChild(headSlot);
 		tbody?.appendChild(bodySlot);
