@@ -3,8 +3,8 @@ import TableRow from './TableRow';
 
 @customElement('t-footer-row')
 export default class TableFooterRow extends TableRow {
-	@property({ reflect: true })
-	slot = 'footer';
+	// eslint-disable-next-line lit/no-native-attributes
+	@property({ reflect: true }) slot = 'footer';
 }
 
 declare global {

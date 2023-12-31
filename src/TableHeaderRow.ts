@@ -3,8 +3,8 @@ import TableRow from './TableRow';
 
 @customElement('t-header-row')
 export default class TableHeaderRow extends TableRow {
-	@property({ reflect: true })
-	slot = 'header';
+	// eslint-disable-next-line lit/no-native-attributes
+	@property({ reflect: true }) slot = 'header';
 }
 
 declare global {
