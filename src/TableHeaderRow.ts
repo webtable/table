@@ -1,10 +1,13 @@
-import { customElement, property } from 'lit/decorators.js';
+import { customElement } from 'lit/decorators.js';
 import TableRow from './TableRow';
 
 @customElement('t-header-row')
 export default class TableHeaderRow extends TableRow {
-	// eslint-disable-next-line lit/no-native-attributes
-	@property({ reflect: true }) slot = 'header';
+	connectedCallback(): void {
+		// eslint-disable-next-line wc/guard-super-call
+		super.connectedCallback();
+		this.setAttribute('slot', 'header');
+	}
 }
 
 declare global {

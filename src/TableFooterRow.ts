@@ -1,10 +1,13 @@
-import { customElement, property } from 'lit/decorators.js';
+import { customElement } from 'lit/decorators.js';
 import TableRow from './TableRow';
 
 @customElement('t-footer-row')
 export default class TableFooterRow extends TableRow {
-	// eslint-disable-next-line lit/no-native-attributes
-	@property({ reflect: true }) slot = 'footer';
+	connectedCallback(): void {
+		// eslint-disable-next-line wc/guard-super-call
+		super.connectedCallback();
+		this.setAttribute('slot', 'footer');
+	}
 }
 
 declare global {
