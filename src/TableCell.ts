@@ -9,8 +9,7 @@ import style from './style/TableCell.css';
 export default class TableCell extends LitElement {
 	static readonly styles = [reboot, style];
 
-	// eslint-disable-next-line lit/no-classfield-shadowing
-	@property({ type: Number }) colspan?: number;
+	@property({ type: Number }) accessor colspan: number | undefined = undefined;
 
 	render() {
 		return html`<td part="cell" colspan="${ ifDefined(this.colspan) }"><slot></slot></td>`;
