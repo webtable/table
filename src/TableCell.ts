@@ -9,7 +9,7 @@ export default class TableCell extends LitElement {
 	static readonly styles = [reboot, style];
 
 	render() {
-		return html`<td><slot></slot></td>`;
+		return html`<td part="cell"><slot></slot></td>`;
 	}
 }
 
