@@ -10,7 +10,7 @@ export default class TableRow extends LitElement {
 	static readonly styles = [reboot, style, activeVariant];
 
 	render() {
-		return html`<tr></tr>`;
+		return html`<tr part="row"></tr>`;
 	}
 
 	firstUpdated() {

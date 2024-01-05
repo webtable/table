@@ -13,7 +13,7 @@ export default class Table extends LitElement {
 
 	render() {
 		return html`
-			<table>
+			<table part="table">
 				<caption part="caption"><slot name="caption"></slot></caption>
 				<thead part="header"></thead>
 				<tbody part="body"></tbody>
