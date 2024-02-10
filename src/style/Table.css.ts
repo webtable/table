@@ -3,9 +3,11 @@ import { css } from 'lit';
 export default css`
 	table {
 		width: var(--wt-table-width);
-		border: var(--wt-border-width) var(--wt-border-style) var(--wt-border-color);
+		border-color: var(--wt-border-color);
 		border-collapse: var(--wt-border-collapse);
 		border-spacing: var(--wt-border-spacing);
+		border-style: var(--wt-border-style);
+		border-width: var(--wt-border-width);
 		
 		&, & > tbody {
 			vertical-align: var(--wt-vertical-align);
