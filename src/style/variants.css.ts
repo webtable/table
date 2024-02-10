@@ -5,13 +5,13 @@ import { css } from 'lit';
  */
 export const bordered = css`
 	:host {
-		--t-bordered-border-width: 1px;
-		--t-bordered-cell-border-bottom-width: 0;
+		--wt-bordered-border-width: 1px;
+		--wt-bordered-cell-border-bottom-width: 0;
 	}
 
 	:host([bordered]) {
-		--t-border-width: var(--t-bordered-border-width);
-		--t-cell-border-bottom-width: var(--t-bordered-cell-border-bottom-width);
+		--wt-border-width: var(--wt-bordered-border-width);
+		--wt-cell-border-bottom-width: var(--wt-bordered-cell-border-bottom-width);
 	}
 `;
 
@@ -20,13 +20,13 @@ export const bordered = css`
  */
 export const borderless = css`
 	:host {
-		--t-borderless-border-width: 0;
-		--t-borderless-cell-border-bottom-width: 0;
+		--wt-borderless-border-width: 0;
+		--wt-borderless-cell-border-bottom-width: 0;
 	}
 
 	:host([borderless]) {
-		--t-border-width: var(--t-borderless-border-width);
-		--t-cell-border-bottom-width: var(--t-borderless-cell-border-bottom-width);
+		--wt-border-width: var(--wt-borderless-border-width);
+		--wt-cell-border-bottom-width: var(--wt-borderless-cell-border-bottom-width);
 	}
 `;
 
@@ -35,13 +35,13 @@ export const borderless = css`
  */
 export const compact = css`
 	:host {
-		--t-compact-cell-padding-x: .25rem;
-		--t-compact-cell-padding-y: .25rem;
+		--wt-compact-cell-padding-x: .25rem;
+		--wt-compact-cell-padding-y: .25rem;
 	}
 
 	:host([compact]) {
-		--t-cell-padding-x: var(--t-compact-cell-padding-x);
-		--t-cell-padding-y: var(--t-compact-cell-padding-y);
+		--wt-cell-padding-x: var(--wt-compact-cell-padding-x);
+		--wt-cell-padding-y: var(--wt-compact-cell-padding-y);
 	}
 `;
 
@@ -50,13 +50,13 @@ export const compact = css`
  */
 export const hover = css`
 	:host {
-		--t-hover-bg-factor: .075;
-		--t-hover-bg: rgba(var(--t-emphasis-color-rbg), var(--t-hover-bg-factor));
+		--wt-hover-bg-factor: .075;
+		--wt-hover-bg: rgba(var(--wt-emphasis-color-rbg), var(--wt-hover-bg-factor));
 	}
 
 	:host([hover]) > table > tbody > ::slotted(*:hover) {
-		--t-bg-state: var(--t-hover-bg);
-		--t-color-state: var(--t-hover-color);
+		--wt-bg-state: var(--wt-hover-bg);
+		--wt-color-state: var(--wt-hover-color);
 	}
 `;
 
@@ -65,13 +65,13 @@ export const hover = css`
  */
 export const striped = css`
 	:host {
-		--t-striped-bg-factor: .05;
-		--t-striped-bg: rgba(var(--t-emphasis-color-rbg), var(--t-striped-bg-factor));
+		--wt-striped-bg-factor: .05;
+		--wt-striped-bg: rgba(var(--wt-emphasis-color-rbg), var(--wt-striped-bg-factor));
 	}
 
 	:host([striped]) > table > tbody > ::slotted(*:nth-child(even)) {
-		--t-bg-type: var(--t-striped-bg);
-		--t-color-type: var(--t-striped-color);
+		--wt-bg-type: var(--wt-striped-bg);
+		--wt-color-type: var(--wt-striped-color);
 	}
 `;
 
@@ -80,13 +80,13 @@ export const striped = css`
  */
 export const stripedColumns = css`
 	:host {
-		--t-striped-columns-bg-factor: .05;
-		--t-striped-columns-bg: rgba(var(--t-emphasis-color-rbg), var(--t-striped-columns-bg-factor));
+		--wt-striped-columns-bg-factor: .05;
+		--wt-striped-columns-bg: rgba(var(--wt-emphasis-color-rbg), var(--wt-striped-columns-bg-factor));
 	}
 
 	:host([striped-columns]) > table > :not(caption) > ::slotted(*) {
-		--t-bg-striped-columns: var(--t-striped-columns-bg);
-		--t-color-striped-columns: var(--t-striped-columns-color);
+		--wt-bg-striped-columns: var(--wt-striped-columns-bg);
+		--wt-color-striped-columns: var(--wt-striped-columns-color);
 	}
 `;
 

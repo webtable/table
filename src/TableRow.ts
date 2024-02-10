@@ -5,7 +5,7 @@ import reboot from './style/reboot.css';
 import style from './style/TableRow.css';
 import activeVariant from './style/activeVariant.css';
 
-@customElement('t-row')
+@customElement('wt-row')
 export default class TableRow extends LitElement {
 	static readonly styles = [reboot, style, activeVariant];
 
@@ -28,6 +28,6 @@ export default class TableRow extends LitElement {
 
 declare global {
 	interface HTMLElementTagNameMap {
-		't-row': TableRow;
+		'wt-row': TableRow;
 	}
 }

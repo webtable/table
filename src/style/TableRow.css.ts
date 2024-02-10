@@ -6,12 +6,12 @@ export default css`
 	}
 
 	tr {
-		border-color: var(--t-border-color);
-		border-width: var(--t-border-width) 0;
+		border-color: var(--wt-border-color);
+		border-width: var(--wt-border-width) 0;
 
 		::slotted(:nth-child(even)) {
-			--t-bg-column: var(--t-bg-striped-columns);
-			--t-color-column: var(--t-color-striped-columns);
+			--wt-bg-column: var(--wt-bg-striped-columns);
+			--wt-color-column: var(--wt-color-striped-columns);
 		}
 	}
 `;

@@ -2,13 +2,13 @@ import { css } from 'lit';
 
 export default css`
 	table {
-		width: var(--t-table-width);
-		border: var(--t-border-width) var(--t-border-style) var(--t-border-color);
-		border-collapse: var(--t-border-collapse);
-		border-spacing: var(--t-border-spacing);
+		width: var(--wt-table-width);
+		border: var(--wt-border-width) var(--wt-border-style) var(--wt-border-color);
+		border-collapse: var(--wt-border-collapse);
+		border-spacing: var(--wt-border-spacing);
 		
 		&, & > tbody {
-			vertical-align: var(--t-vertical-align);
+			vertical-align: var(--wt-vertical-align);
 		}
 
 		& > thead {
@@ -21,8 +21,8 @@ export default css`
 		}
 
 		:host([dividers]) > & > tbody {
-			border-top: var(--t-divider);
-			border-bottom: var(--t-divider);
+			border-top: var(--wt-divider);
+			border-bottom: var(--wt-divider);
 		}
 
 		:host([sticky-footer]) > & > tfoot {

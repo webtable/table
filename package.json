@@ -1,16 +1,16 @@
 {
-  "name": "@serg.io/t-table",
+  "name": "@webtable/webtable",
   "version": "0.4.2",
   "description": "Table custom element",
   "license": "MIT",
-  "homepage": "https://github.com/serg-io/t-table",
+  "homepage": "https://github.com/webtable/webtable",
   "author": "Sergio Alcantara (https://github.com/serg-io)",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/serg-io/t-table.git"
+    "url": "git+https://github.com/webtable/webtable.git"
   },
   "bugs": {
-    "url": "https://github.com/serg-io/t-table/issues"
+    "url": "https://github.com/webtable/webtable/issues"
   },
   "type": "module",
   "main": "./dist/index.js",
@@ -48,6 +48,7 @@
     "typescript": "^5.3.3"
   },
   "keywords": [
+    "webtable",
     "table",
     "data table",
     "data-table",

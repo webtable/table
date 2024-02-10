@@ -5,12 +5,12 @@ import { css } from 'lit';
  */
 export default css`
 	:host {
-		--t-active-bg-factor: .1;
-		--t-active-bg: rgba(var(--t-emphasis-color-rbg), var(--t-active-bg-factor));
+		--wt-active-bg-factor: .1;
+		--wt-active-bg: rgba(var(--wt-emphasis-color-rbg), var(--wt-active-bg-factor));
 	}
 
 	:host([active]), ::slotted([active]) {
-		--t-bg-state: var(--t-active-bg);
-		--t-color-state: var(--t-active-color);
+		--wt-bg-state: var(--wt-active-bg);
+		--wt-color-state: var(--wt-active-color);
 	}
 `;

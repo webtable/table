@@ -17,7 +17,7 @@ export default css`
 	}
 
 	caption {
-		color: var(--t-caption-color);
+		color: var(--wt-caption-color);
 		text-align: left;
 	}
 

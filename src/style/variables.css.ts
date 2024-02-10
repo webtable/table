@@ -2,29 +2,29 @@ import { css } from 'lit';
 
 export default css`
 	:host {
-		--t-border-collapse: separate;
-		--t-border-spacing: 0;
-		--t-border-style: solid;
-		--t-border-width: 0;
-		--t-cell-border-bottom-width: 1px;
-		--t-cell-padding-x: .5rem;
-		--t-cell-padding-y: .5rem;
-		--t-divider: calc(var(--t-border-width) * 2) solid currentcolor;
-		--t-table-width: 100%;
-		--t-vertical-align: top;
+		--wt-border-collapse: separate;
+		--wt-border-spacing: 0;
+		--wt-border-style: solid;
+		--wt-border-width: 0;
+		--wt-cell-border-bottom-width: 1px;
+		--wt-cell-padding-x: .5rem;
+		--wt-cell-padding-y: .5rem;
+		--wt-divider: calc(var(--wt-border-width) * 2) solid currentcolor;
+		--wt-table-width: 100%;
+		--wt-vertical-align: top;
 
-		--t-color-column: var(--t-color);
-		--t-color-type: initial;
-		--t-color-state: initial;
-		--t-color-striped-columns: var(--t-color-column);
+		--wt-color-column: var(--wt-color);
+		--wt-color-type: initial;
+		--wt-color-state: initial;
+		--wt-color-striped-columns: var(--wt-color-column);
 
-		--t-active-color: var(--t-color);
-		--t-hover-color: var(--t-color);
-		--t-striped-color: var(--t-color);
+		--wt-active-color: var(--wt-color);
+		--wt-hover-color: var(--wt-color);
+		--wt-striped-color: var(--wt-color);
 
-		--t-bg-column: transparent;
-		--t-bg-type: initial;
-		--t-bg-state: initial;
-		--t-bg-striped-columns: var(--t-bg-column);
+		--wt-bg-column: transparent;
+		--wt-bg-type: initial;
+		--wt-bg-state: initial;
+		--wt-bg-striped-columns: var(--wt-bg-column);
 	}
 `;

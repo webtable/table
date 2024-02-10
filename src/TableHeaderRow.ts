@@ -1,7 +1,7 @@
 import { customElement } from 'lit/decorators.js';
 import TableRow from './TableRow';
 
-@customElement('t-header-row')
+@customElement('wt-header-row')
 export default class TableHeaderRow extends TableRow {
 	connectedCallback(): void {
 		// eslint-disable-next-line wc/guard-super-call
@@ -12,6 +12,6 @@ export default class TableHeaderRow extends TableRow {
 
 declare global {
 	interface HTMLElementTagNameMap {
-		't-header-row': TableHeaderRow;
+		'wt-header-row': TableHeaderRow;
 	}
 }
