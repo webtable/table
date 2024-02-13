@@ -28,6 +28,8 @@
   ],
   "scripts": {
     "build": "rimraf dist tsconfig.tsbuildinfo && tsc",
+    "build-storybook": "storybook build",
+    "storybook": "storybook dev -p 6006",
     "lint": "eslint --color .",
     "preversion": "npm run lint",
     "version": "npm run build",
@@ -39,11 +41,17 @@
   "devDependencies": {
     "@eslint/eslintrc": "^3.0.1",
     "@open-wc/eslint-config": "^12.0.2",
+    "@storybook/addon-essentials": "^7.6.14",
+    "@storybook/addon-links": "^7.6.14",
+    "@storybook/blocks": "^7.6.14",
+    "@storybook/web-components": "^7.6.14",
+    "@storybook/web-components-vite": "^7.6.14",
     "@typescript-eslint/eslint-plugin": "^6.16.0",
     "@typescript-eslint/parser": "^6.16.0",
     "eslint": "^8.56.0",
     "eslint-config-airbnb-typescript": "^17.1.0",
     "rimraf": "^5.0.5",
+    "storybook": "^7.6.14",
     "tslib": "^2.6.2",
     "typescript": "^5.3.3"
   },

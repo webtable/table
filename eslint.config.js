@@ -25,14 +25,14 @@ export default [
 		'plugin:@typescript-eslint/recommended-requiring-type-checking',
 	),
 	{
-		// Lint typescript files but ignore unti tests (those are configured below).
-		files: ['src/**/*.ts'],
+		// Lint typescript files but ignore unit tests (those are configured below).
+		files: ['.storybook/**/*.ts', 'src/**/*.ts'],
 		languageOptions: {
 			ecmaVersion: 2022,
 			sourceType: 'module',
 			parser: typescriptParser,
 			parserOptions: {
-				project: resolve(__dirname, 'tsconfig.json'),
+				project: resolve(__dirname, 'eslint.tsconfig.json'),
 			},
 		},
 		plugins: {
