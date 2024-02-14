@@ -15,14 +15,9 @@ export default class TableRow extends LitElement {
 
 	firstUpdated() {
 		const tr = this.renderRoot.firstElementChild as HTMLTableRowElement;
-		const start = document.createElement('slot');
 		const slot = document.createElement('slot');
-		const end = document.createElement('slot');
 
-		start.name = 'start';
-		end.name = 'end';
-
-		tr.append(start, slot, end);
+		tr.append(slot);
 	}
 }
 
