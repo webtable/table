@@ -27,10 +27,13 @@
     "src"
   ],
   "scripts": {
+    "dev": "npm-run-all --silent --print-name --print-label --parallel storybook lint:watch",
+    "lint": "eslint --color .",
+    "lint:with-cache": "eslint --color --cache --cache-location .eslintcache .",
+    "lint:watch": "rimraf .eslintcache && nodemon --watch src --watch .storybook --ext ts --exec \"npm run --silent lint:with-cache\"",
     "build": "rimraf dist tsconfig.tsbuildinfo && tsc",
     "build-storybook": "storybook build",
     "storybook": "storybook dev -p 6006",
-    "lint": "eslint --color .",
     "preversion": "npm run lint",
     "version": "npm run build",
     "postversion": "git push && git push --tags && npm publish"
@@ -50,6 +53,8 @@
     "@typescript-eslint/parser": "^6.16.0",
     "eslint": "^8.56.0",
     "eslint-config-airbnb-typescript": "^17.1.0",
+    "nodemon": "^3.0.3",
+    "npm-run-all": "^4.1.5",
     "rimraf": "^5.0.5",
     "storybook": "^7.6.14",
     "tslib": "^2.6.2",
