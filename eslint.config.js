@@ -87,6 +87,7 @@ export default [
 			 * Allow rest arguments (...rest) to have a type of any.
 			 */
 			'@typescript-eslint/no-explicit-any': ['error', { ignoreRestArgs: true }],
+			'wc/guard-super-call': 'off',
 		},
 	},
 	{
