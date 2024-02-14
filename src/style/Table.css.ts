@@ -32,7 +32,7 @@ export default css`
 			position: sticky;
 		}
 
-		:host([caption="top"]) > & {
+		:host([caption-side="top"]) > & {
 			caption-side: top;
 		}
 	}

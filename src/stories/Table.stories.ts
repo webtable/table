@@ -23,6 +23,15 @@ export default {
 				defaultValue: { summary: false },
 			},
 		},
+		captionSide: {
+			name: 'Caption Side',
+			control: 'select',
+			options: ['bottom', 'top'],
+			description: 'Controls the location of the table\'s caption.',
+			table: {
+				defaultValue: { summary: 'bottom' },
+			},
+		},
 		compact: {
 			name: 'Compact',
 			control: 'boolean',
