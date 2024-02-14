@@ -6,7 +6,10 @@ export default css`
 		--wt-border-spacing: 0;
 		--wt-border-style: solid;
 		--wt-border-width: 0;
+		--wt-cell-border-top-width: 0;
+		--wt-cell-border-right-width: 0;
 		--wt-cell-border-bottom-width: 1px;
+		--wt-cell-border-left-width: 0;
 		--wt-cell-padding-x: .5rem;
 		--wt-cell-padding-y: .5rem;
 		--wt-divider: calc(var(--wt-border-width) * 2) solid currentcolor;

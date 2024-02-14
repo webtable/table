@@ -6,12 +6,11 @@ import { css } from 'lit';
 export const bordered = css`
 	:host {
 		--wt-bordered-border-width: 1px;
-		--wt-bordered-cell-border-bottom-width: 0;
 	}
 
 	:host([bordered]) {
 		--wt-border-width: var(--wt-bordered-border-width);
-		--wt-cell-border-bottom-width: var(--wt-bordered-cell-border-bottom-width);
+		--wt-cell-border-right-width: var(--wt-bordered-border-width);
 	}
 `;
 
@@ -21,12 +20,13 @@ export const bordered = css`
 export const borderless = css`
 	:host {
 		--wt-borderless-border-width: 0;
-		--wt-borderless-cell-border-bottom-width: 0;
+		--wt-borderless-cell-border-width: 0;
 	}
 
 	:host([borderless]) {
 		--wt-border-width: var(--wt-borderless-border-width);
-		--wt-cell-border-bottom-width: var(--wt-borderless-cell-border-bottom-width);
+		--wt-cell-border-bottom-width: var(--wt-borderless-cell-border-width);
+		--wt-cell-border-right-width: var(--wt-borderless-cell-border-width);
 	}
 `;
 

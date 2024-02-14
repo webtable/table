@@ -7,7 +7,7 @@ export default css`
 		border-collapse: var(--wt-border-collapse);
 		border-spacing: var(--wt-border-spacing);
 		border-style: var(--wt-border-style);
-		border-width: var(--wt-border-width);
+		border-width: var(--wt-border-width) var(--wt-border-width) 0 var(--wt-border-width);
 		
 		&, & > tbody {
 			vertical-align: var(--wt-vertical-align);
