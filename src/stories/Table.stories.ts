@@ -1,8 +1,8 @@
-import { html } from 'lit';
 import type { Meta, StoryObj } from '@storybook/web-components';
-import Table, { type TableContent, type TableArgs } from './render/Table';
+import Table, { type TableArgs } from './Table';
 
 export default {
+	render: Table,
 	tags: ['autodocs'],
 	component: 'wt-table',
 	title: 'Example/Web Table',
@@ -40,6 +40,14 @@ export default {
 				defaultValue: { summary: false },
 			},
 		},
+		dividers: {
+			name: 'Dividers',
+			control: 'boolean',
+			description: 'Adds a diving border between table sections.',
+			table: {
+				defaultValue: { summary: false },
+			},
+		},
 		hover: {
 			name: 'Hover',
 			control: 'boolean',
@@ -65,32 +73,18 @@ export default {
 			},
 		},
 	},
-	args: {
-		bordered: false,
-		borderless: false,
-		compact: false,
-		hover: false,
-		striped: false,
-		stripedColumns: false,
-	},
 } satisfies Meta<TableArgs>;
 
 type Story = StoryObj<TableArgs>;
 
-const intl = new Intl.NumberFormat(navigator.language);
-
-const basicContent: TableContent = {
-	title: 'Earth\'s Oceans',
-	header: ['#', 'Ocean', html`Area (km<sup>2</sup>)`, html`Volume (km<sup>3</sup>)`],
-	rows: [
-		[1, 'Pacific Ocean', intl.format(168723000), intl.format(669880000)],
-		[2, 'Atlantic Ocean', intl.format(85133000), intl.format(310410900)],
-		[3, 'Indian Ocean', intl.format(70560000), intl.format(264000000)],
-		[4, 'Antarctic/Southern Ocean', intl.format(21960000), intl.format(71800000)],
-		[5, 'Arctic Ocean', intl.format(15558000), intl.format(18750000)],
-	],
-};
-
 export const Basic: Story = {
-	render: (args: TableArgs) => Table({ ...args, ...basicContent }),
+	args: {
+		bordered: false,
+		borderless: false,
+		compact: false,
+		dividers: true,
+		hover: false,
+		striped: false,
+		stripedColumns: false,
+	},
 };

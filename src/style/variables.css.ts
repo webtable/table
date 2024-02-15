@@ -2,7 +2,7 @@ import { css } from 'lit';
 
 export default css`
 	:host {
-		--wt-border-collapse: separate;
+		--wt-border-collapse: collapse;
 		--wt-border-spacing: 0;
 		--wt-border-style: solid;
 		--wt-border-width: 0;
@@ -12,7 +12,8 @@ export default css`
 		--wt-cell-border-left-width: 0;
 		--wt-cell-padding-x: .5rem;
 		--wt-cell-padding-y: .5rem;
-		--wt-divider: calc(var(--wt-border-width) * 2) solid currentcolor;
+		--wt-divider-width: 2px;
+		--wt-divider-color: currentcolor;
 		--wt-table-width: 100%;
 		--wt-vertical-align: top;
 

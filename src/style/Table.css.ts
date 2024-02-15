@@ -22,9 +22,10 @@ export default css`
 			position: sticky;
 		}
 
-		:host([dividers]) > & > tbody {
-			border-top: var(--wt-divider);
-			border-bottom: var(--wt-divider);
+		:host([dividers]) > & > tbody > ::slotted(:first-of-type),
+		:host([dividers]) > & > tfoot > ::slotted(:first-of-type) {
+			--wt-cell-border-top-width: var(--wt-divider-width);
+			--wt-cell-border-top-color: var(--wt-divider-color);
 		}
 
 		:host([sticky-footer]) > & > tfoot {

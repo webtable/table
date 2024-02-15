@@ -12,6 +12,7 @@ export default css`
 	td, th {
 		padding: var(--wt-cell-padding-y) var(--wt-cell-padding-x);
 		border-color: var(--wt-border-color);
+		border-top-color: var(--wt-cell-border-top-color, var(--wt-border-color));
 		border-top-width: var(--wt-cell-border-top-width, 0);
 		border-right-width: var(--wt-cell-border-right-width, 0);
 		border-bottom-width: var(--wt-cell-border-bottom-width, 0);
