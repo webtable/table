@@ -15,7 +15,7 @@ const compat = new FlatCompat({ baseDirectory: __dirname });
 export default [
 	{
 		// Ignore Javascript files.
-		ignores: ['dist', '**/*.js', '**/*.mjs'],
+		ignores: ['dist', '**/*.js', '**/*.mjs', '.*.d.ts'],
 	},
 	...compat.extends(
 		'@open-wc/eslint-config',

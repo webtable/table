@@ -27,13 +27,17 @@
     "src"
   ],
   "scripts": {
-    "dev": "npm-run-all --silent --print-name --print-label --parallel storybook lint:watch",
+    "dev": "npm-run-all --silent --print-name --print-label --parallel storybook lint:watch test:watch",
+    "build": "rimraf dist tsconfig.tsbuildinfo && tsc",
+    "build:storybook": "storybook build",
+    "fix:chai": "cp .chai-dom-diff-plugin.d.ts node_modules/@open-wc/semantic-dom-diff/chai-dom-diff-plugin.d.ts",
     "lint": "eslint --color .",
     "lint:with-cache": "eslint --color --cache --cache-location .eslintcache .",
     "lint:watch": "rimraf .eslintcache && nodemon --watch src --watch .storybook --ext ts --exec \"npm run --silent lint:with-cache\"",
-    "build": "rimraf dist tsconfig.tsbuildinfo && tsc",
-    "build-storybook": "storybook build",
+    "postinstall": "run-s --silent --print-name --print-label fix:chai",
     "storybook": "storybook dev -p 6006",
+    "test": "web-test-runner",
+    "test:watch": "nodemon --watch src --ext ts --exec \"web-test-runner\"",
     "preversion": "npm run lint",
     "version": "npm run build",
     "postversion": "git push && git push --tags && npm publish"
@@ -44,13 +48,17 @@
   "devDependencies": {
     "@eslint/eslintrc": "^3.0.1",
     "@open-wc/eslint-config": "^12.0.2",
+    "@open-wc/testing": "^4.0.0",
     "@storybook/addon-essentials": "^7.6.14",
     "@storybook/addon-links": "^7.6.14",
     "@storybook/blocks": "^7.6.14",
     "@storybook/web-components": "^7.6.14",
     "@storybook/web-components-vite": "^7.6.14",
+    "@types/mocha": "^10.0.6",
     "@typescript-eslint/eslint-plugin": "^6.16.0",
     "@typescript-eslint/parser": "^6.16.0",
+    "@web/dev-server-esbuild": "^1.0.2",
+    "@web/test-runner": "^0.18.0",
     "eslint": "^8.56.0",
     "eslint-config-airbnb-typescript": "^17.1.0",
     "nodemon": "^3.0.3",
@@ -66,6 +74,7 @@
     "data table",
     "data-table",
     "datatable",
+    "html table",
     "web components",
     "custom elements"
   ]
