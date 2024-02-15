@@ -86,7 +86,7 @@ export const stripedColumns = css`
 
 	:host([striped-columns]) > table > :not(caption) > ::slotted(*) {
 		--wt-bg-striped-columns: var(--wt-striped-columns-bg);
-		--wt-color-striped-columns: var(--wt-striped-columns-color);
+		--wt-color-striped-columns: var(--wt-striped-color);
 	}
 `;
 

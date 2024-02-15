@@ -36,6 +36,18 @@ export const dark = css`
 		--wt-caption-color: var(--wt-dark-caption-color);
 		--wt-emphasis-color-rbg: var(--wt-dark-emphasis-color-rbg);
 	}
+
+	@media (prefers-color-scheme: dark) {
+		:host {
+			color-scheme: dark;
+
+			--wt-bg-color: var(--wt-dark-bg-color);
+			--wt-border-color: var(--wt-dark-border-color);
+			--wt-color: var(--wt-dark-color);
+			--wt-caption-color: var(--wt-dark-caption-color);
+			--wt-emphasis-color-rbg: var(--wt-dark-emphasis-color-rbg);
+		}
+	}
 `;
 
 export default [light, dark];
