@@ -69,6 +69,60 @@
 			<wt-cell>1,334,840,900</wt-cell>
 		</wt-footer-row>
 	</wt-table>
+	<form>
+		<fieldset>
+			<legend>Variants</legend>
+			<div>
+				<input id="c1" type="checkbox" name="bordered" />
+				<label for="c1">Bordered</label>
+			</div>
+			<div>
+				<input id="c2" type="checkbox" name="borderless" />
+				<label for="c2">Borderless</label>
+			</div>
+			<div>
+				<input id="c3" type="checkbox" name="compact" />
+				<label for="c3">Compact</label>
+			</div>
+			<div>
+				<input id="c4" type="checkbox" name="dividers" />
+				<label for="c4">Dividers</label>
+			</div>
+			<div>
+				<input id="c5" type="checkbox" name="hover" />
+				<label for="c5">Hover</label>
+			</div>
+			<div>
+				<input id="c6" type="checkbox" name="striped" />
+				<label for="c6">Striped</label>
+			</div>
+			<div>
+				<input id="c7" type="checkbox" name="striped-columns" />
+				<label for="c7">Striped Columns</label>
+			</div>
+			<div>
+				<input id="c8" type="checkbox" name="caption-side" value="top" />
+				<label for="c8">Top Caption</label>
+			</div>
+		</fieldset>
+	</form>
 	<script type="module" src="./src/index.ts"></script>
+	<script>
+		const table = document.querySelector('wt-table');
+		const fieldset = document.querySelector('fieldset');
+
+		fieldset.addEventListener('click', (event) => {
+			const el = event.target;
+			const { name, value } = el;
+
+			if (el.matches('input[type="checkbox"]')) {
+				if (el.matches(':checked')) {
+					table.setAttribute(name, el.value ?? '');
+				} else {
+					table.removeAttribute(name);
+				}
+			}
+		});
+	</script>
 </body>
 </html>
