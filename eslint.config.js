@@ -32,7 +32,7 @@ export default [
 			sourceType: 'module',
 			parser: typescriptParser,
 			parserOptions: {
-				project: resolve(__dirname, 'eslint.tsconfig.json'),
+				project: resolve(__dirname, 'tsconfig.json'),
 			},
 		},
 		plugins: {

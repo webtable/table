@@ -1,5 +1,4 @@
-import { fileURLToPath } from 'url';
-import { esbuildPlugin as esbuild } from '@web/dev-server-esbuild';
+import { esbuildPlugin } from './web-dev-server.config.mjs';
 
 const filteredLogs = ['Lit is in dev mode'];
 
@@ -16,20 +15,14 @@ function filterBrowserLogs(log) {
 	return true;
 }
 
-export const esbuildPlugin = esbuild({
-	ts: true,
-	target: 'es2022',
-	tsconfig: fileURLToPath(new URL('./tsconfig.json', import.meta.url)),
-});
-
 export default {
 	concurrentBrowsers: 5,
 	concurrency: 1,
-	port: 8081,
-	nodeResolve: true,
 	files: ['src/specs/**/*.spec.ts'],
 	filterBrowserLogs,
+	nodeResolve: true,
 	plugins: [
 		esbuildPlugin,
 	],
+	port: 8081,
 };
