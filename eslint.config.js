@@ -26,7 +26,7 @@ export default [
 	),
 	{
 		// Lint typescript files but ignore unit tests (those are configured below).
-		files: ['.storybook/**/*.ts', 'src/**/*.ts'],
+		files: ['src/**/*.ts'],
 		languageOptions: {
 			ecmaVersion: 2022,
 			sourceType: 'module',
