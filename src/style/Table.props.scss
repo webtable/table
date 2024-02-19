@@ -1,0 +1,106 @@
+/**
+ * Light theme.
+ */
+:host {
+	color-scheme: light;
+	--wt_color: var(--wt-color, hsl(240 5.9% 10%));
+	--wt_bg-color: var(--wt-bg-color, hsl(0, 0%, 100%));
+	--wt_border-color: var(--wt-border-color, hsl(240 5.9% 90%));
+	--wt_caption-color: var(--wt-caption-color, hsl(240 3.8% 46.1%));
+	--wt_emphasis-color-rbg: var(--wt-emphasis-color-rbg, 0, 0, 0);
+}
+
+/**
+ * Dark theme
+ */
+:host {
+	--wt_dark-color: var(--wt-dark-color, hsl(240 9.1% 91.8%));
+	--wt_dark-bg-color: var(--wt-dark-bg-color, hsl(240 5.7% 18.2%));
+	--wt_dark-border-color: var(--wt-dark-border-color, hsl(240 5% 35.5%));
+	--wt_dark-caption-color: var(--wt-dark-caption-color, hsl(240 5.3% 58%));
+	--wt_dark-emphasis-color-rbg: var(--wt-dark-emphasis-color-rbg, 255, 255, 255);
+}
+@mixin dark-theme {
+	color-scheme: dark;
+	--wt_color: var(--wt_dark-color);
+	--wt_bg-color: var(--wt_dark-bg-color);
+	--wt_border-color: var(--wt_dark-border-color);
+	--wt_caption-color: var(--wt_dark-caption-color);
+	--wt_emphasis-color-rbg: var(--wt_dark-emphasis-color-rbg);
+}
+:host([theme="dark"]) {
+	@include dark-theme;
+}
+@media (prefers-color-scheme: dark) {
+	:host {
+		@include dark-theme;
+	}
+}
+
+/**
+ * Color and background color for different states.
+ */
+:host {
+	--wt_table-width: var(--wt-table-width, 100%);
+	--wt_vertical-align: var(--wt-vertical-align, top);
+
+	--wt_color-type: var(--wt-color-type, initial);
+	--wt_color-state: var(--wt-color-state, initial);
+	--wt_color-column: var(--wt-color-column, var(--wt_color));
+	--wt_color-striped-columns: var(--wt_color-striped-columns, var(--wt_color-column));
+
+	--wt_active-bg-factor: var(--wt-active-bg-factor, .1);
+	--wt_active-bg: var(--wt-active-bg, rgba(var(--wt_emphasis-color-rbg), var(--wt_active-bg-factor)));
+	--wt_active-color: var(--wt-active-color, var(--wt_color));
+	--wt_hover-color: var(--wt-hover-color, var(--wt_color));
+	--wt_striped-color: var(--wt-striped-color, var(--wt_color));
+
+	--wt_bg-column: var(--wt-bg-column, transparent);
+	--wt_bg-type: var(--wt-bg-type, initial);
+	--wt_bg-state: var(--wt-bg-state, initial);
+	--wt_bg-striped-columns: var(--wt-bg-striped-columns, var(--wt_bg-column));
+}
+
+:host {
+	// Borders
+	--wt_border-collapse: var(--wt-border-collapse, collapse);
+	--wt_border-spacing: var(--wt-border-spacing, 0);
+	--wt_border-style: var(--wt-border-style, solid);
+	--wt_border-width: var(--wt-border-width, 0);
+
+	// Cell border widths.
+	--wt_cell-border-top-width: var(--wt-cell-border-top-width, 0);
+	--wt_cell-border-right-width: var(--wt-cell-border-right-width, 0);
+	--wt_cell-border-bottom-width: var(--wt-cell-border-bottom-width, 1px);
+	--wt_cell-border-left-width: var(--wt-cell-border-left-width, 0);
+
+	// Dividing border between table sections.
+	--wt_divider-width: var(--wt-divider-width, 2px);
+	--wt_divider-color: var(--wt-divider-color, currentcolor);
+
+	// Cell padding.
+	--wt_cell-padding-x: var(--wt-cell-padding-x, .5rem);
+	--wt_cell-padding-y: var(--wt-cell-padding-y, .5rem);
+}
+
+/**
+ * Variants.
+ */
+:host {
+	--wt_bordered-border-width: var(--wt-bordered-border-width, 1px);
+
+	--wt_borderless-border-width: var(--wt-borderless-border-width, 0);
+	--wt_borderless-cell-border-width: var(--wt-borderless-cell-border-width, 0);
+
+	--wt_compact-cell-padding-x: var(--wt-compact-cell-padding-x, .25rem);
+	--wt_compact-cell-padding-y: var(--wt-compact-cell-padding-y, .25rem);
+
+	--wt_hover-bg-factor: var(--wt-hover-bg-factor, .075);
+	--wt_hover-bg: var(--wt-hover-bg, rgba(var(--wt_emphasis-color-rbg), var(--wt_hover-bg-factor)));
+
+	--wt_striped-bg-factor: var(--wt-striped-bg-factor, .05);
+	--wt_striped-bg: var(--wt-striped-bg, rgba(var(--wt_emphasis-color-rbg), var(--wt_striped-bg-factor)));
+
+	--wt_striped-columns-bg-factor: var(--wt-striped-columns-bg-factor, .05);
+	--wt_striped-columns-bg: var(--wt-striped-columns-bg, rgba(var(--wt_emphasis-color-rbg), var(--wt_striped-columns-bg-factor)));
+}

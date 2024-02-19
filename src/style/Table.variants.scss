@@ -1,0 +1,48 @@
+/**
+ * Bordered variant: Adds borders to all cells in the table.
+ */
+:host([bordered]) {
+	--wt_border-width: var(--wt_bordered-border-width);
+	--wt_cell-border-right-width: var(--wt_bordered-border-width);
+}
+
+/**
+ * Borderless variant: Removes all borders from the table.
+ */
+:host([borderless]) {
+	--wt_border-width: var(--wt_borderless-border-width);
+	--wt_cell-border-bottom-width: var(--wt_borderless-cell-border-width);
+	--wt_cell-border-right-width: var(--wt_borderless-cell-border-width);
+}
+
+/**
+ * Comptact variant: Reduces the top and bottom padding of all the cells in the table.
+ */
+:host([compact]) {
+	--wt_cell-padding-x: var(--wt_compact-cell-padding-x);
+	--wt_cell-padding-y: var(--wt_compact-cell-padding-y);
+ }
+
+/**
+ * Hover variant: Adds a background color to the tbody rows when the mouse hovers over them.
+ */
+:host([hover]) > table > tbody > ::slotted(*:hover) {
+	--wt_bg-state: var(--wt_hover-bg);
+	--wt_color-state: var(--wt_hover-color);
+ }
+
+/**
+ * Striped variant: Adds a background color to slotted rows in the table.
+ */
+:host([striped]) > table > tbody > ::slotted(*:nth-child(odd)) {
+	--wt_bg-type: var(--wt_striped-bg);
+	--wt_color-type: var(--wt_striped-color);
+ }
+
+/**
+ * Striped columns variant: Adds a background color to even "slotted" columns in the table.
+ */
+:host([striped-columns]) > table > :not(caption) > ::slotted(*) {
+	--wt_bg-striped-columns: var(--wt_striped-columns-bg);
+	--wt_color-striped-columns: var(--wt_striped-color);
+}

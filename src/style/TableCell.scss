@@ -3,19 +3,19 @@
 }
 
 :host(:last-child) {
-	--wt-cell-border-right-width: 0;
+	--wt_cell-border-right-width: 0;
 }
 
 td, th {
-	padding: var(--wt-cell-padding-y) var(--wt-cell-padding-x);
-	border-color: var(--wt-border-color);
-	border-top-color: var(--wt-cell-border-top-color, var(--wt-border-color));
-	border-top-width: var(--wt-cell-border-top-width, 0);
-	border-right-width: var(--wt-cell-border-right-width, 0);
-	border-bottom-width: var(--wt-cell-border-bottom-width, 0);
-	border-left-width: var(--wt-cell-border-left-width, 0);
+	padding: var(--wt_cell-padding-y) var(--wt_cell-padding-x);
+	border-color: var(--wt_border-color);
+	border-top-color: var(--wt_cell-border-top-color, var(--wt_border-color));
+	border-top-width: var(--wt_cell-border-top-width, 0);
+	border-right-width: var(--wt_cell-border-right-width, 0);
+	border-bottom-width: var(--wt_cell-border-bottom-width, 0);
+	border-left-width: var(--wt_cell-border-left-width, 0);
 
-	background-color: var(--wt-bg-color);
-	box-shadow: inset 0 0 0 9999px var(--wt-bg-state, var(--wt-bg-type, var(--wt-bg-column)));
-	color: var(--wt-color-state, var(--wt-color-type, var(--wt-color-column)));
+	background-color: var(--wt_bg-color);
+	box-shadow: inset 0 0 0 9999px var(--wt_bg-state, var(--wt_bg-type, var(--wt_bg-column)));
+	color: var(--wt_color-state, var(--wt_color-type, var(--wt_color-column)));
 }

@@ -2,7 +2,12 @@
 	display: contents;
 }
 
+:host([active]), ::slotted([active]) {
+	--wt_bg-state: var(--wt_active-bg);
+	--wt_color-state: var(--wt_active-color);
+}
+
 tr ::slotted(:nth-child(even)) {
-	--wt-bg-column: var(--wt-bg-striped-columns);
-	--wt-color-column: var(--wt-color-striped-columns);
+	--wt_bg-column: var(--wt_bg-striped-columns);
+	--wt_color-column: var(--wt_color-striped-columns);
 }

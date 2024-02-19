@@ -2,14 +2,13 @@ import { html, LitElement } from 'lit';
 import { customElement } from 'lit/decorators.js';
 
 import reboot from './style/reboot.scss';
-import variables from './style/variables.scss';
+import properties from './style/Table.props.scss';
+import variants from './style/Table.variants.scss';
 import style from './style/Table.scss';
-import themes from './style/themes.scss';
-import variants from './style/variants.scss';
 
 @customElement('wt-table')
 export default class Table extends LitElement {
-	static readonly styles = [reboot, variables, style, themes, variants];
+	static readonly styles = [reboot, properties, variants, style];
 
 	render() {
 		return html`

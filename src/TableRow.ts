@@ -3,11 +3,10 @@ import { customElement } from 'lit/decorators.js';
 
 import reboot from './style/reboot.scss';
 import style from './style/TableRow.scss';
-import activeVariant from './style/activeVariant.scss';
 
 @customElement('wt-row')
 export default class TableRow extends LitElement {
-	static readonly styles = [reboot, style, activeVariant];
+	static readonly styles = [reboot, style];
 
 	render() {
 		return html`<tr part="row"></tr>`;
