@@ -1,9 +1,9 @@
 import { html, LitElement } from 'lit';
 import { customElement } from 'lit/decorators.js';
 
-import reboot from './style/reboot.css';
-import style from './style/TableRow.css';
-import activeVariant from './style/activeVariant.css';
+import reboot from './style/reboot.scss';
+import style from './style/TableRow.scss';
+import activeVariant from './style/activeVariant.scss';
 
 @customElement('wt-row')
 export default class TableRow extends LitElement {

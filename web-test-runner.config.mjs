@@ -1,4 +1,4 @@
-import { esbuildPlugin } from './web-dev-server.config.mjs';
+import { esbuildPlugin, litCssPlugin, mimeTypes } from './web-dev-server.config.mjs';
 
 const filteredLogs = ['Lit is in dev mode'];
 
@@ -20,8 +20,10 @@ export default {
 	concurrency: 1,
 	files: ['src/specs/**/*.spec.ts'],
 	filterBrowserLogs,
+	mimeTypes,
 	nodeResolve: true,
 	plugins: [
+		litCssPlugin,
 		esbuildPlugin,
 	],
 	port: 8081,

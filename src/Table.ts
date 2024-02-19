@@ -1,15 +1,15 @@
 import { html, LitElement } from 'lit';
 import { customElement } from 'lit/decorators.js';
 
-import reboot from './style/reboot.css';
-import variables from './style/variables.css';
-import style from './style/Table.css';
-import themes from './style/themes.css';
-import variants from './style/variants.css';
+import reboot from './style/reboot.scss';
+import variables from './style/variables.scss';
+import style from './style/Table.scss';
+import themes from './style/themes.scss';
+import variants from './style/variants.scss';
 
 @customElement('wt-table')
 export default class Table extends LitElement {
-	static readonly styles = [reboot, variables, style, ...themes, ...variants];
+	static readonly styles = [reboot, variables, style, themes, variants];
 
 	render() {
 		return html`
