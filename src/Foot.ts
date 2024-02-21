@@ -8,6 +8,8 @@ export const TAG_NAME = 'wt-foot';
 export default class Foot extends ContainerWithSlot {
 	protected static readonly styles = [super.styles, style];
 
+	protected static readonly containerPartName = 'foot';
+
 	protected static readonly containerTagName = 'tfoot';
 }
 

@@ -10,6 +10,8 @@ export const TAG_NAME = 'wt-table';
 export default class Table extends ContainerWithSlot {
 	protected static readonly styles = [super.styles, properties, variants, style];
 
+	protected static readonly containerPartName = 'table';
+
 	protected static readonly containerTagName = 'table';
 }
 

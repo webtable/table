@@ -8,6 +8,8 @@ export const TAG_NAME = 'wt-row';
 export default class TableRow extends ContainerWithSlot {
 	protected static readonly styles = [super.styles, style];
 
+	protected static readonly containerPartName = 'row';
+
 	protected static readonly containerTagName = 'tr';
 }
 

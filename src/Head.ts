@@ -8,6 +8,8 @@ export const TAG_NAME = 'wt-head';
 export default class Head extends ContainerWithSlot {
 	protected static readonly styles = [super.styles, style];
 
+	protected static readonly containerPartName = 'head';
+
 	protected static readonly containerTagName = 'thead';
 }
 

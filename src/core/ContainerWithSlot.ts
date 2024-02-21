@@ -28,7 +28,7 @@ export default abstract class ContainerWithSlot extends WebTableElement {
 	 * The part name of the container. This part name can be used from outside the element's shadow DOM to target the
 	 * container element in CSS.
 	 */
-	protected static readonly containerPartName = 'container';
+	protected static readonly containerPartName: string;
 
 	/**
 	 * The HTML tag name of the container element.

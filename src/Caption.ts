@@ -8,6 +8,8 @@ export const TAG_NAME = 'wt-caption';
 export default class Caption extends ContainerWithSlot {
 	protected static readonly styles = [super.styles, style];
 
+	protected static readonly containerPartName = 'caption';
+
 	protected static readonly containerTagName = 'caption';
 }
 
