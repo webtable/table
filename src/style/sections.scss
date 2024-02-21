@@ -1,0 +1,24 @@
+caption {
+	text-align: left;
+	color: var(--wt_caption-color);
+}
+
+thead {
+	top: var(--wt_thead-top, auto);
+	position: var(--wt_thead-position, static);
+}
+
+tbody ::slotted(:nth-child(odd)) {
+	--wt_bg-type: var(--wt_striped-bg-type);
+	--wt_color-type: var(--wt_striped-color-type);
+}
+
+tbody, tfoot {
+	border-color: var(--wt_divider-color);
+	border-top-width: var(--wt_section-divider-width, 0);
+}
+
+tfoot {
+	bottom: var(--wt_tfoot-bottom, auto);
+	position: var(--wt_tfoot-position, static);
+}

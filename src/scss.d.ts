@@ -1,9 +1,12 @@
 /**
- * Declare the type of all SCSS files.
+ * Declares the type of all SCSS files.
  */
 declare module '*.scss' {
-	import { CSSResultGroup } from 'lit';
+	const css: string;
+	const style: CSSStyleSheet;
 
-	const style: CSSResultGroup;
-	export default style;
+	export {
+		css,
+		style as default,
+	};
 }

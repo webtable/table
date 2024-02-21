@@ -5,37 +5,4 @@ table {
 	border-spacing: var(--wt_border-spacing);
 	border-style: var(--wt_border-style);
 	border-width: var(--wt_border-width) var(--wt_border-width) 0 var(--wt_border-width);
-	
-	caption {
-		text-align: left;
-		color: var(--wt_caption-color);
-	}
-
-	&, & > tbody {
-		vertical-align: var(--wt_vertical-align);
-	}
-
-	& > thead {
-		vertical-align: bottom;
-	}
-
-	:host([sticky-header]) > & > thead {
-		top: 0;
-		position: sticky;
-	}
-
-	:host([dividers]) > & > tbody > ::slotted(:first-of-type),
-	:host([dividers]) > & > tfoot > ::slotted(:first-of-type) {
-		--wt_cell-border-top-width: var(--wt_divider-width);
-		--wt_cell-border-top-color: var(--wt_divider-color);
-	}
-
-	:host([sticky-footer]) > & > tfoot {
-		bottom: 0;
-		position: sticky;
-	}
-
-	:host([caption-side="top"]) > & {
-		caption-side: top;
-	}
 }

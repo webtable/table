@@ -1,18 +1,18 @@
 import customElement from './customElement';
 import ContainerWithSlot from './ContainerWithSlot';
-import style from './style/TableRow.scss';
+import style from './style/sections.scss';
 
-export const TAG_NAME = 'wt-row';
+export const TAG_NAME = 'wt-caption';
 
 @customElement(TAG_NAME)
-export default class TableRow extends ContainerWithSlot {
+export default class Caption extends ContainerWithSlot {
 	protected static readonly styles = [super.styles, style];
 
-	protected static readonly containerTagName = 'tr';
+	protected static readonly containerTagName = 'caption';
 }
 
 declare global {
 	interface HTMLElementTagNameMap {
-		[TAG_NAME]: TableRow;
+		[TAG_NAME]: Caption;
 	}
 }

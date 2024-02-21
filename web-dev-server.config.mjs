@@ -1,29 +1,43 @@
-import { fileURLToPath, pathToFileURL } from 'url';
-import { compileString } from 'sass';
-import rollupLitCss from 'rollup-plugin-lit-css';
-import { fromRollup } from '@web/dev-server-rollup';
+import { compile } from 'sass';
+import { fileURLToPath } from 'url';
 import { esbuildPlugin as esbuild } from '@web/dev-server-esbuild';
+
+function fullPath(relativePath) {
+	const fileURL = new URL(relativePath, import.meta.url);
+	return fileURLToPath(fileURL);
+}
+
+function cssToESModule(css) {
+	return `
+export const css = \`${ css }\`;
+const style = new CSSStyleSheet();
+style.replaceSync(css);
+export default style;
+	`.trim();
+}
 
 export const mimeTypes = {
 	'**/*.scss': 'js',
 };
 
-const litCss = fromRollup(rollupLitCss);
+export const cssPlugin = {
+	name: 'css-esm',
+	transform(context) {
+		if (!/\.scss/i.test(context.url)) {
+			return;
+		}
 
-export const litCssPlugin = litCss({
-	include: 'src/**/*.scss',
-	transform: (source, { filePath }) => {
-		const url = pathToFileURL(filePath);
-		const result = compileString(source, { url, style: 'compressed'});
+		const relativePath = context.url.replace(/^\/?/, './');
+		const result = compile(fullPath(relativePath), { style: 'compressed' });
 
-		return result.css;
-	},
-});
+		return cssToESModule(result.css);
+	}
+}
 
 export const esbuildPlugin = esbuild({
 	ts: true,
 	target: 'es2022',
-	tsconfig: fileURLToPath(new URL('./tsconfig.json', import.meta.url)),
+	tsconfig: fullPath('./tsconfig.json'),
 });
 
 export default {
@@ -32,7 +46,7 @@ export default {
 	nodeResolve: true,
 	open: '/',
 	plugins: [
-		litCssPlugin,
+		cssPlugin,
 		esbuildPlugin,
 	],
 	port: 8080,

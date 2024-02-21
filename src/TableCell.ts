@@ -1,24 +1,18 @@
-import { html, LitElement } from 'lit';
-import { ifDefined } from 'lit/directives/if-defined.js';
-import { customElement, property } from 'lit/decorators.js';
-
-import reboot from './style/reboot.scss';
+import customElement from './customElement';
+import ContainerWithSlot from './ContainerWithSlot';
 import style from './style/TableCell.scss';
 
-@customElement('wt-cell')
-export default class TableCell extends LitElement {
-	static readonly styles = [reboot, style];
+export const TAG_NAME = 'wt-cell';
 
-	@property({ type: Number })
-	accessor colspan: number | undefined = undefined;
+@customElement(TAG_NAME)
+export default class TableCell extends ContainerWithSlot {
+	protected static readonly styles = [super.styles, style];
 
-	render() {
-		return html`<td part="cell" colspan="${ ifDefined(this.colspan) }"><slot></slot></td>`;
-	}
+	protected static readonly containerTagName: keyof HTMLElementTagNameMap = 'td';
 }
 
 declare global {
 	interface HTMLElementTagNameMap {
-		'wt-cell': TableCell;
+		[TAG_NAME]: TableCell;
 	}
 }

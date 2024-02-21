@@ -26,23 +26,53 @@
 /**
  * Hover variant: Adds a background color to the tbody rows when the mouse hovers over them.
  */
-:host([hover]) > table > tbody > ::slotted(*:hover) {
-	--wt_bg-state: var(--wt_hover-bg);
-	--wt_color-state: var(--wt_hover-color);
+:host([hover]) ::slotted(wt-body) {
+	--wt_hover-bg-state: var(--wt_hover-bg);
+	--wt_hover-color-state: var(--wt_hover-color);
  }
 
 /**
  * Striped variant: Adds a background color to slotted rows in the table.
  */
-:host([striped]) > table > tbody > ::slotted(*:nth-child(odd)) {
-	--wt_bg-type: var(--wt_striped-bg);
-	--wt_color-type: var(--wt_striped-color);
+:host([striped]) ::slotted(wt-body) {
+	--wt_striped-bg-type: var(--wt_striped-bg);
+	--wt_striped-color-type: var(--wt_striped-color);
  }
 
 /**
  * Striped columns variant: Adds a background color to even "slotted" columns in the table.
  */
-:host([striped-columns]) > table > :not(caption) > ::slotted(*) {
-	--wt_bg-striped-columns: var(--wt_striped-columns-bg);
-	--wt_color-striped-columns: var(--wt_striped-color);
+:host([striped-columns]) > table {
+	--wt_striped-col-bg: var(--wt_striped-columns-bg);
+	--wt_striped-col-color: var(--wt_striped-color);
+}
+
+/**
+ * Positions the <caption> element on top of the table.
+ */
+:host([caption-side="top"]) > table {
+	caption-side: top;
+}
+
+/**
+ * Adds a top border to the <tbody> and <tfoot> elements.
+ */
+:host([dividers]) > table {
+	--wt_section-divider-width: var(--wt_divider-width);
+}
+
+/**
+ * Makes the <thead> sticky to the top of the table.
+ */
+:host([sticky*="head" i]) > table {
+	--wt_thead-top: 0;
+	--wt_thead-position: sticky;
+}
+
+/**
+ * Makes the <tfoot> sticky to the bottom of the table.
+ */
+:host([sticky*="foot" i]) > table {
+	--wt_tfoot-bottom: 0;
+	--wt_tfoot-position: sticky;
 }

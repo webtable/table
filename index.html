@@ -17,7 +17,7 @@
 				background-color: hsl(240 5.7% 18.2%);
 			}
 		}
-		wt-table > *:not(p) > :nth-last-child(-n + 2), wt-footer-row {
+		wt-row :nth-last-child(-n + 2), wt-foot {
 			text-align: right;
 		}
 	</style>
@@ -25,49 +25,57 @@
 <body>
 	<h1>Web Table</h1>
 	<wt-table>
-		<p slot="caption">Earth's Oceans</p>
-		<wt-header-row>
-			<wt-header-cell>#</wt-header-cell>
-			<wt-header-cell>Ocean</wt-header-cell>
-			<wt-header-cell>Area (km<sup>2</sup>)</wt-header-cell>
-			<wt-header-cell>Volume (km<sup>3</sup>)</wt-header-cell>
-		</wt-header-row>
-		<wt-row>
-			<wt-cell>1</wt-cell>
-			<wt-cell>Pacific Ocean</wt-cell>
-			<wt-cell>168,723,000</wt-cell>
-			<wt-cell>669,880,000</wt-cell>
-		</wt-row>
-		<wt-row>
-			<wt-cell>2</wt-cell>
-			<wt-cell>Atlantic Ocean</wt-cell>
-			<wt-cell>85,133,000</wt-cell>
-			<wt-cell>310,410,900</wt-cell>
-		</wt-row>
-		<wt-row>
-			<wt-cell>3</wt-cell>
-			<wt-cell>Indian Ocean</wt-cell>
-			<wt-cell>70,560,000</wt-cell>
-			<wt-cell>264,000,000</wt-cell>
-		</wt-row>
-		<wt-row>
-			<wt-cell>4</wt-cell>
-			<wt-cell>Antarctic/Southern Ocean</wt-cell>
-			<wt-cell>21,960,000</wt-cell>
-			<wt-cell>71,800,000</wt-cell>
-		</wt-row>
-		<wt-row>
-			<wt-cell>5</wt-cell>
-			<wt-cell>Artic Ocean</wt-cell>
-			<wt-cell>15,558,000</wt-cell>
-			<wt-cell>18,750,000</wt-cell>
-		</wt-row>
-		<wt-footer-row>
-			<wt-cell></wt-cell>
-			<wt-header-cell>Total:</wt-header-cell>
-			<wt-cell>361,934,000</wt-cell>
-			<wt-cell>1,334,840,900</wt-cell>
-		</wt-footer-row>
+		<wt-caption>
+			<p>Earth's Oceans</p>
+		</wt-caption>
+		<wt-head>
+			<wt-row>
+				<wt-header-cell>#</wt-header-cell>
+				<wt-header-cell>Ocean</wt-header-cell>
+				<wt-header-cell>Area (km<sup>2</sup>)</wt-header-cell>
+				<wt-header-cell>Volume (km<sup>3</sup>)</wt-header-cell>
+			</wt-row>
+		</wt-head>
+		<wt-body>
+			<wt-row>
+				<wt-cell>1</wt-cell>
+				<wt-cell>Pacific Ocean</wt-cell>
+				<wt-cell>168,723,000</wt-cell>
+				<wt-cell>669,880,000</wt-cell>
+			</wt-row>
+			<wt-row>
+				<wt-cell>2</wt-cell>
+				<wt-cell>Atlantic Ocean</wt-cell>
+				<wt-cell>85,133,000</wt-cell>
+				<wt-cell>310,410,900</wt-cell>
+			</wt-row>
+			<wt-row>
+				<wt-cell>3</wt-cell>
+				<wt-cell>Indian Ocean</wt-cell>
+				<wt-cell>70,560,000</wt-cell>
+				<wt-cell>264,000,000</wt-cell>
+			</wt-row>
+			<wt-row>
+				<wt-cell>4</wt-cell>
+				<wt-cell>Antarctic/Southern Ocean</wt-cell>
+				<wt-cell>21,960,000</wt-cell>
+				<wt-cell>71,800,000</wt-cell>
+			</wt-row>
+			<wt-row>
+				<wt-cell>5</wt-cell>
+				<wt-cell>Artic Ocean</wt-cell>
+				<wt-cell>15,558,000</wt-cell>
+				<wt-cell>18,750,000</wt-cell>
+			</wt-row>
+		</wt-body>
+		<wt-foot>
+			<wt-row>
+				<wt-cell></wt-cell>
+				<wt-header-cell>Total:</wt-header-cell>
+				<wt-cell>361,934,000</wt-cell>
+				<wt-cell>1,334,840,900</wt-cell>
+			</wt-row>
+		</wt-foot>
 	</wt-table>
 	<form>
 		<fieldset>

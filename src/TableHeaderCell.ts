@@ -1,18 +1,15 @@
-import { html } from 'lit';
-import { customElement } from 'lit/decorators.js';
-import { ifDefined } from 'lit/directives/if-defined.js';
-
+import customElement from './customElement';
 import TableCell from './TableCell';
 
-@customElement('wt-header-cell')
+export const TAG_NAME = 'wt-header-cell';
+
+@customElement(TAG_NAME)
 export default class TableHeaderCell extends TableCell {
-	render() {
-		return html`<th part="cell" colspan="${ ifDefined(this.colspan) }"><slot></slot></th>`;
-	}
+	protected static readonly containerTagName = 'th';
 }
 
 declare global {
 	interface HTMLElementTagNameMap {
-		'wt-header-cell': TableHeaderCell;
+		[TAG_NAME]: TableHeaderCell;
 	}
 }

@@ -55,6 +55,7 @@ export default [
 				ignoreStrings: true,
 				ignoreTemplateLiterals: true,
 			}],
+			'no-restricted-exports': 'off',
 			'no-restricted-syntax': [
 				'error',
 				{

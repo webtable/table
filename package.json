@@ -27,8 +27,9 @@
     "src"
   ],
   "scripts": {
-    "dev": "npm-run-all --silent --print-name --print-label --parallel lint:watch test:watch serve",
-    "build": "rimraf dist tsconfig.tsbuildinfo && tsc",
+    "dev": "npm-run-all --silent --print-name --print-label --sequential clean --parallel lint:watch test:watch serve",
+    "build": "run-s --silent --print-name --print-label clean tsc",
+    "clean": "rimraf dist tsconfig.tsbuildinfo",
     "fix:chai": "cp .chai-dom-diff-plugin.d.ts node_modules/@open-wc/semantic-dom-diff/chai-dom-diff-plugin.d.ts",
     "lint": "eslint --color .",
     "lint:with-cache": "eslint --color --cache --cache-location .eslintcache .",
@@ -37,12 +38,10 @@
     "serve": "web-dev-server",
     "test": "web-test-runner",
     "test:watch": "nodemon --watch src --ext ts --exec \"web-test-runner\"",
+    "tsc": "tsc",
     "preversion": "npm run lint",
     "version": "npm run build",
     "postversion": "git push && git push --tags && npm publish"
-  },
-  "dependencies": {
-    "lit": "^3.1.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3.0.1",
@@ -53,14 +52,12 @@
     "@typescript-eslint/parser": "^6.16.0",
     "@web/dev-server": "^0.4.2",
     "@web/dev-server-esbuild": "^1.0.2",
-    "@web/dev-server-rollup": "^0.6.1",
     "@web/test-runner": "^0.18.0",
     "eslint": "^8.56.0",
     "eslint-config-airbnb-typescript": "^17.1.0",
     "nodemon": "^3.0.3",
     "npm-run-all": "^4.1.5",
     "rimraf": "^5.0.5",
-    "rollup-plugin-lit-css": "^4.0.1",
     "sass": "^1.71.0",
     "tslib": "^2.6.2",
     "typescript": "^5.3.3"

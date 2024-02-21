@@ -47,7 +47,6 @@
 	--wt_color-type: var(--wt-color-type, initial);
 	--wt_color-state: var(--wt-color-state, initial);
 	--wt_color-column: var(--wt-color-column, var(--wt_color));
-	--wt_color-striped-columns: var(--wt_color-striped-columns, var(--wt_color-column));
 
 	--wt_active-bg-factor: var(--wt-active-bg-factor, .1);
 	--wt_active-bg: var(--wt-active-bg, rgba(var(--wt_emphasis-color-rbg), var(--wt_active-bg-factor)));
@@ -55,10 +54,9 @@
 	--wt_hover-color: var(--wt-hover-color, var(--wt_color));
 	--wt_striped-color: var(--wt-striped-color, var(--wt_color));
 
-	--wt_bg-column: var(--wt-bg-column, transparent);
 	--wt_bg-type: var(--wt-bg-type, initial);
 	--wt_bg-state: var(--wt-bg-state, initial);
-	--wt_bg-striped-columns: var(--wt-bg-striped-columns, var(--wt_bg-column));
+	--wt_bg-column: var(--wt-bg-column, transparent);
 }
 
 :host {

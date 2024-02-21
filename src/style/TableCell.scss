@@ -1,12 +1,5 @@
-:host {
-	display: contents;
-}
-
-:host(:last-child) {
-	--wt_cell-border-right-width: 0;
-}
-
 td, th {
+	vertical-align: var(--wt_vertical-align);
 	padding: var(--wt_cell-padding-y) var(--wt_cell-padding-x);
 	border-color: var(--wt_border-color);
 	border-top-color: var(--wt_cell-border-top-color, var(--wt_border-color));
@@ -16,6 +9,6 @@ td, th {
 	border-left-width: var(--wt_cell-border-left-width, 0);
 
 	background-color: var(--wt_bg-color);
-	box-shadow: inset 0 0 0 9999px var(--wt_bg-state, var(--wt_bg-type, var(--wt_bg-column)));
 	color: var(--wt_color-state, var(--wt_color-type, var(--wt_color-column)));
+	box-shadow: inset 0 0 0 9999px var(--wt_bg-state, var(--wt_bg-type, var(--wt_bg-column)));
 }

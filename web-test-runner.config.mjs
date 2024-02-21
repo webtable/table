@@ -1,4 +1,4 @@
-import { esbuildPlugin, litCssPlugin, mimeTypes } from './web-dev-server.config.mjs';
+import { cssPlugin, esbuildPlugin, mimeTypes } from './web-dev-server.config.mjs';
 
 const filteredLogs = ['Lit is in dev mode'];
 
@@ -23,7 +23,7 @@ export default {
 	mimeTypes,
 	nodeResolve: true,
 	plugins: [
-		litCssPlugin,
+		cssPlugin,
 		esbuildPlugin,
 	],
 	port: 8081,
