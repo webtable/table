@@ -1,16 +1,16 @@
 {
-  "name": "@webtable/webtable",
+  "name": "@webtable/table",
   "version": "0.4.2",
   "description": "Table custom element",
   "license": "MIT",
-  "homepage": "https://github.com/webtable/webtable",
+  "homepage": "https://github.com/webtable/table",
   "author": "Sergio Alcantara (https://github.com/serg-io)",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/webtable/webtable.git"
+    "url": "git+https://github.com/webtable/table.git"
   },
   "bugs": {
-    "url": "https://github.com/webtable/webtable/issues"
+    "url": "https://github.com/webtable/table/issues"
   },
   "type": "module",
   "main": "./dist/index.js",
