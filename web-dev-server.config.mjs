@@ -32,7 +32,7 @@ export const cssPlugin = {
 
 		return cssToESModule(result.css);
 	}
-}
+};
 
 export const esbuildPlugin = esbuild({
 	ts: true,
