@@ -1,6 +1,6 @@
 import customElement from './core/customElement';
 import ContainerWithSlot from './core/ContainerWithSlot';
-import style from './style/TableCell.scss';
+import style from './style/Cell.scss';
 
 export const TAG_NAME = 'wt-cell';
 

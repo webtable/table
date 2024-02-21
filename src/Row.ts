@@ -1,6 +1,6 @@
 import customElement from './core/customElement';
 import ContainerWithSlot from './core/ContainerWithSlot';
-import style from './style/TableRow.scss';
+import style from './style/Row.scss';
 
 export const TAG_NAME = 'wt-row';
 
