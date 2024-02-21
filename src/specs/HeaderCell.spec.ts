@@ -1,5 +1,5 @@
 import { expect, fixture, html } from '@open-wc/testing';
-import '../TableHeaderCell';
+import '../HeaderCell';
 
 describe('TableHeaderCell', () => {
 	context('render', () => {

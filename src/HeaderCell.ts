@@ -1,5 +1,5 @@
-import customElement from './customElement';
-import TableCell from './TableCell';
+import customElement from './core/customElement';
+import TableCell from './Cell';
 
 export const TAG_NAME = 'wt-header-cell';
 

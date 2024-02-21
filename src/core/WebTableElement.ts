@@ -1,4 +1,4 @@
-import reboot from './style/reboot.scss';
+import reboot from '../style/reboot.scss';
 
 /**
  * Base class for defining custom elements.

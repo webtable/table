@@ -1,5 +1,5 @@
 import { expect, fixture, html } from '@open-wc/testing';
-import '../TableRow';
+import '../Row';
 
 describe('TableRow', () => {
 	context('render', () => {

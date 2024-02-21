@@ -1,5 +1,5 @@
-import customElement from './customElement';
-import ContainerWithSlot from './ContainerWithSlot';
+import customElement from './core/customElement';
+import ContainerWithSlot from './core/ContainerWithSlot';
 import properties from './style/Table.props.scss';
 import variants from './style/Table.variants.scss';
 import style from './style/Table.scss';

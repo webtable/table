@@ -1,5 +1,5 @@
-import customElement from './customElement';
-import ContainerWithSlot from './ContainerWithSlot';
+import customElement from './core/customElement';
+import ContainerWithSlot from './core/ContainerWithSlot';
 import style from './style/sections.scss';
 
 export const TAG_NAME = 'wt-head';

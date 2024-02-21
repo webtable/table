@@ -1,5 +1,5 @@
 import WebTableElement from './WebTableElement';
-import displayContents from './style/displayContents.scss';
+import displayContents from '../style/displayContents.scss';
 
 /**
  * This class can be extended to define a custom element that has a single "container" element in its shadow DOM and
