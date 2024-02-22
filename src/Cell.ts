@@ -12,7 +12,7 @@ export default class TableCell extends ContainerWithSlot {
 
 	protected static readonly containerTagName: keyof HTMLElementTagNameMap = 'td';
 
-	protected static readonly reflect = ['colspan'];
+	protected static readonly reflect = ['colspan', 'headers', 'rowspan'];
 }
 
 declare global {
