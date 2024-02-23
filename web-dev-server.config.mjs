@@ -2,18 +2,25 @@ import { compile } from 'sass';
 import { fileURLToPath } from 'url';
 import { esbuildPlugin as esbuild } from '@web/dev-server-esbuild';
 
-function fullPath(relativePath) {
+export function fullPath(relativePath) {
 	const fileURL = new URL(relativePath, import.meta.url);
 	return fileURLToPath(fileURL);
 }
 
-function cssToESModule(css) {
+export function cssModule(css) {
 	return `
 export const css = \`${ css }\`;
 const style = new CSSStyleSheet();
 style.replaceSync(css);
 export default style;
 	`.trim();
+}
+
+export function scssFileToESModule(relativePath) {
+	const scssFile = fullPath(relativePath.replace(/^\/?/, './'));
+	const result = compile(scssFile, { style: 'compressed' });
+
+	return cssModule(result.css);
 }
 
 export const mimeTypes = {
@@ -23,14 +30,8 @@ export const mimeTypes = {
 export const cssPlugin = {
 	name: 'css-esm',
 	transform(context) {
-		if (!/\.scss/i.test(context.url)) {
-			return;
-		}
-
-		const relativePath = context.url.replace(/^\/?/, './');
-		const result = compile(fullPath(relativePath), { style: 'compressed' });
-
-		return cssToESModule(result.css);
+		const { url } = context;
+		return !/\.scss/i.test(url) ? undefined : scssFileToESModule(url);
 	}
 };
 

@@ -1,26 +1,23 @@
 # Editors.
-/.idea
-/.vscode
+.idea
+.vscode
 
 # System Files.
 .DS_Store
 
 # NPM
-/node_modules/
-/npm-debug.log
+node_modules
+npm-debug.log
 # Optional npm cache directory.
 .npm
 # Output of 'npm pack'.
 *.tgz
 
-# Testing.
-/coverage/
-
-# Temp Files and Directories.
-/.tmp/
-/.eslintcache
-
-# Build.
-/dist/
-/out-tsc/
-tsconfig.tsbuildinfo
+# Build and temp files.
+tmp
+dist
+out-tsc
+.eslintcache
+.rollup.cache
+*.tsbuildinfo
+wt-table-*
