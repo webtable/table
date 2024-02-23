@@ -1,10 +1,6 @@
-import customElement from './core/customElement';
 import ContainerWithSlot from './core/ContainerWithSlot';
 import style from './style/Row.scss';
 
-export const TAG_NAME = 'wt-row';
-
-@customElement(TAG_NAME)
 export default class TableRow extends ContainerWithSlot {
 	protected static readonly styles = [super.styles, style];
 
@@ -13,8 +9,10 @@ export default class TableRow extends ContainerWithSlot {
 	protected static readonly containerTagName = 'tr';
 }
 
+TableRow.register('wt-row');
+
 declare global {
 	interface HTMLElementTagNameMap {
-		[TAG_NAME]: TableRow;
+		'wt-row': TableRow;
 	}
 }

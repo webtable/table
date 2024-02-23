@@ -1,12 +1,8 @@
-import customElement from './core/customElement';
 import ContainerWithSlot from './core/ContainerWithSlot';
 import properties from './style/Table.props.scss';
 import variants from './style/Table.variants.scss';
 import style from './style/Table.scss';
 
-export const TAG_NAME = 'wt-table';
-
-@customElement(TAG_NAME)
 export default class Table extends ContainerWithSlot {
 	protected static readonly styles = [super.styles, properties, variants, style];
 
@@ -15,8 +11,10 @@ export default class Table extends ContainerWithSlot {
 	protected static readonly containerTagName = 'table';
 }
 
+Table.register('wt-table');
+
 declare global {
 	interface HTMLElementTagNameMap {
-		[TAG_NAME]: Table;
+		'wt-table': Table;
 	}
 }

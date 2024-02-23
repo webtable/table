@@ -1,10 +1,6 @@
-import customElement from './core/customElement';
 import ContainerWithSlot from './core/ContainerWithSlot';
 import style from './style/sections.scss';
 
-export const TAG_NAME = 'wt-foot';
-
-@customElement(TAG_NAME)
 export default class Foot extends ContainerWithSlot {
 	protected static readonly styles = [super.styles, style];
 
@@ -13,8 +9,10 @@ export default class Foot extends ContainerWithSlot {
 	protected static readonly containerTagName = 'tfoot';
 }
 
+Foot.register('wt-foot');
+
 declare global {
 	interface HTMLElementTagNameMap {
-		[TAG_NAME]: Foot;
+		'wt-foot': Foot;
 	}
 }

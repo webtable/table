@@ -33,6 +33,13 @@ export default abstract class WebTableElement extends HTMLElement {
 	}
 
 	/**
+	 * Registers `this` class as a custom element using the given HTML `tagname`.
+	 */
+	static register(tagName: string) {
+		customElements.define(tagName, this as unknown as CustomElementConstructor);
+	}
+
+	/**
 	 * Attaches a shadow DOM and adopts the final style sheets.
 	 */
 	constructor() {

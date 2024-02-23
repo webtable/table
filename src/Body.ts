@@ -1,10 +1,6 @@
-import customElement from './core/customElement';
 import ContainerWithSlot from './core/ContainerWithSlot';
 import style from './style/sections.scss';
 
-export const TAG_NAME = 'wt-body';
-
-@customElement(TAG_NAME)
 export default class Body extends ContainerWithSlot {
 	protected static readonly styles = [super.styles, style];
 
@@ -13,8 +9,10 @@ export default class Body extends ContainerWithSlot {
 	protected static readonly containerTagName = 'tbody';
 }
 
+Body.register('wt-body');
+
 declare global {
 	interface HTMLElementTagNameMap {
-		[TAG_NAME]: Body;
+		'wt-body': Body;
 	}
 }

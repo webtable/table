@@ -1,10 +1,6 @@
-import customElement from './core/customElement';
 import ContainerWithSlot from './core/ContainerWithSlot';
 import style from './style/Cell.scss';
 
-export const TAG_NAME = 'wt-cell';
-
-@customElement(TAG_NAME)
 export default class TableCell extends ContainerWithSlot {
 	protected static readonly styles = [super.styles, style];
 
@@ -15,8 +11,10 @@ export default class TableCell extends ContainerWithSlot {
 	protected static readonly reflect = ['colspan', 'headers', 'rowspan'];
 }
 
+TableCell.register('wt-cell');
+
 declare global {
 	interface HTMLElementTagNameMap {
-		[TAG_NAME]: TableCell;
+		'wt-cell': TableCell;
 	}
 }
